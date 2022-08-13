@@ -1,1 +1,18 @@
-<p>Test</p>
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Toggle Dark/Light Mode</h1>
+    <p>Click the button to tgoggle between dark and light mode for this page.</p>\
+    <button onclick="toggleDarkMode()"> Toggle Dark Mode </button>
+</body>
+
+<script>
+    function toggleDarkMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
+</script>
