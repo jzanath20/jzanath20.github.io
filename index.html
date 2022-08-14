@@ -5,14 +5,17 @@
 </head>
 
 <body>
-    <h1>Toggle Dark/Light Mode</h1>
-    <p>Click the button to tgoggle between dark and light mode for this page.</p>\
-    <button onclick="toggleDarkMode()"> Toggle Dark Mode </button>
+    <div id="darkMode">
+        <label> Dark Mode </label>
+        <input type="checkbox" onclick="toggleDarkMode()"><br>
+    </div>
 </body>
 
 <script>
+
     function toggleDarkMode() {
-        var element = document.body;
-        element.classList.toggle("dark-mode");
+        let htmlBody = document.body
+        htmlBody.classList.toggle("dark-mode");
     }
+
 </script>
