@@ -3,12 +3,17 @@
   width: 630px;
 }
 
+#optionSelects {
+  display: flex;
+  justify-content: flex-end;
+}
+
 body {
     padding: 25px;
     background-color: rgb(18, 18, 18);
     color: white;
     font-size: 25px;
-  }
+}
   
 .light-mode {
   background-color: white;
