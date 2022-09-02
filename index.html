@@ -4,8 +4,6 @@
     <link rel="stylesheet" href="styles.css">
     <title>My Projects</title>
     <!-- <meta http-equiv="refresh" content="0; url=https://www.google.com/"> -->
-    <!-- <link rel="stylesheet" href="./node_modules/leaflet/dist/leaflet.css"/>
-    <script src="./node_modules/leaflet/dist/leaflet.js"></script> -->
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
@@ -19,27 +17,104 @@
         </div>
     </div>
 
-    <h1>Projects</h1>
+    <h1>Professional Projects at The McAlear Group</h1>
 
     <ul>
         <li>
-            <h2>Creating a Map using a Python Tiling Library</h2>
-            <p>This is placeholder text</p>
-            <p>Put an example map here using leaflet </p>
+            <h2>Creating a Map using a Python Tiling Library hosted in Azure</h2>
+
+            <p>
+                The purpose of this task was to create a map of a manufacturing facility in order to effectivly communicate with other departments
+                where data screens where going to be placed in the expansion of the facility. To do so, an AutoCAD drawing was created by the engineering department 
+                of the company. In order to get that image to be able to be displayed by Leaflet, the image first needed to go through a process known as 'Tiling'. 
+            </p>
+
+            <p>
+                This process effectivly slices the image in many many tiny little pieces that a Library such as Leaflet can stitch together to form a map. To accomplish this,
+                Leaflet has variace zoom levels that the map utilizes, each level having expontentially more images than the previous. These zoom levels are specified when the image
+                is being tiled, in the case of this project, gdal2tiles was used. Once the map and its accompanying webpage was made, the marker system that was denoting where the screens 
+                would be placed needed to be tweaked. Before, the map markers were hard-coded for ease of testing. Once everything was verified to be working, the marker data was moved to 
+                a MS SQL Server Database that was created using <a href="https://docs.microsoft.com/en-us/ef/core/">Entity Framework</a>. This allowed anyone in charge of updating the map to 
+                edit the marker data with just a datebase update, rather than changing code. 
+            </p>
+
+            <p>
+                Now, the expontential aspect of the tiling process ended leading to an interesting dilemma. Initally, the images were being stored alongside the JavaScript code, however, 
+                having 10's of thousands of images stored alongside code is not ideal. So a solution had to be found so that the code could still reach the images to properly display the map. 
+                To solve this, Microsoft's Azure Blob Storage was utilzed. This Azure service let us store the mass amount of images inside a blob storage that simply could be called
+                from the code to fetch the needed images.
+            </p>
+
+            
+               
+            <p>Here is an example map created using <a href="https://leafletjs.com/examples/quick-start/" target="_blank">Leaflet's quickstart guide</a>. </p>
+
             <div id="map"></div>
             <script src="./mapView.js"></script>
-            <p>Explain how images were hosted using Azure Blob Storage</p>
         </li>
+
         <li>
             <h2>Creating a Webpage To Display Data From a Database</h2>
+
+            
             <p>This is placeholder test using <span style="color: blue"> a span element </span></p>
             <p>Created using MVC Pattern using Razor Syntax</p>
             <p>Using Data from an Azure SQL Database accessing using a Key Vault made by a Senior Dev. </p>
         </li>
+
         <li>
             <h2>Creating an API to handle data requests for a Webpage</h2>
-            <p>This is placeholder text </p>
+
+            <p> 
+                As an onboarding project to get familiar with how all the companies' system worked, a front end application needed to be created as well as an API to go alongside it.
+                The main goal of this project was to create a page that pulled customer data from the database and display various details about the customer and what was ordered. There
+                needed to be a starting page where about 30 of the most recent orders where displayed with the Date, Order ID, Customer ID, etc. were displayed. When you clicked on a table row
+                there were two options that could have been implemented: The first was a redirect to another page that had more details about the customer and the order, the second was to have a popup
+                known as a modal appear and display the data that way.  
+            </p>
+
+            <p> 
+                As this was the first I project worked on, there was a significant learning curve involved in order to get everything up and running. There was a template provided for the API part of the 
+                project, however, ehe entire webpage needed to be set up using Vue, Pinia, Tailwind, and Microsoft's .NET Framework. The API then had to code and setup to work with the webpage and return 
+                data to it from API calls. The only call that this project needed was simply GET requests.
+            </p>
+
+            <p>
+                Here is a bare bones example of what the project looked like once it was completed:
+            </p>
+
+            <span style="color: rgb(84, 218, 223)"> Place Example Table here with generic example data </span>
+            
         </li>
+    </ul>
+
+    <h1>Educational Projects at The University of Toledo</h1>
+    <ul>
+        
+        <li>
+            <h2>Linear Data Structures Main Project</h2>
+        </li>
+        
+        <li>
+            <h2>Card Stack and Flipping</h2>
+        </li>
+        
+        <li>
+            <h2>Assembly Strings Project</h2>
+        </li>
+        
+        <li>
+            <h2>Assembly Radix Project</h2>
+        </li>
+
+        <li>
+            <h2>Connect Four</h2>
+        </li>
+
+        <li>
+            <h2>Shapes</h2>
+        </li>
+        
     </ul>
     
 </body>
