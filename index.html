@@ -56,10 +56,16 @@
         <li>
             <h2>Creating a Webpage To Display Data From a Database</h2>
 
-            
-            <p>This is placeholder test using <span style="color: blue"> a span element </span></p>
-            <p>Created using MVC Pattern using Razor Syntax</p>
-            <p>Using Data from an Azure SQL Database accessing using a Key Vault made by a Senior Dev. </p>
+            <p>  
+                There was an already existing webpage where this data was accessiable, however, it needed to be within a different app than the current one. The current page was housed
+                inside an app using Vue, Pinia, and Tailwind but needed to be moved into an app where none of those were being used. Instead, it had to be created using the MVC Pattern with
+                Razor Syntax. The data was going to be coming from an Azure SQL Database accessed using a Key Vault System set up prior by a Senior Developer.
+            </p>
+
+            <p>
+                Considering that I had already been tasked with adding additional data to the existing page, creating the same webpage in a different app was not all that difficult. The main challenge
+                was keeping functionality the same and adding a few more data aspects to the displayed output. 
+            </p>
         </li>
 
         <li>
@@ -80,15 +86,38 @@
             </p>
 
             <p>
-                Here is a bare bones example of what the project looked like once it was completed:
+                Here is a bare bones example of what the functionality of the project looked like once it was completed:
             </p>
 
-            <span style="color: rgb(84, 218, 223)"> Place Example Table here with generic example data </span>
+            <table>
+                <tr style="background-color: gray">
+                  <th>Order #</th>
+                  <th>Customer Name</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                </tr>
+                <tr>
+                  <td>01</td>
+                  <td>John Doe</td>
+                  <td>01 - 01 - 9999</td>
+                  <td>Completed</td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>Jane Doe</td>
+                  <td>12 - 12 - 9999</td>
+                  <td>In Progress</td>
+                </tr>
+            </table>
+
+            <p>
+                Once a row was clicked on, much more information was displayed such as Date Ordered, Address, Shipping Method, Order Notes, and so on.
+            </p>
             
         </li>
     </ul>
 
-    <h1>Educational Projects at The University of Toledo</h1>
+    <h1>Main Educational Projects at The University of Toledo</h1>
     <ul>
         
         <li>
@@ -105,14 +134,6 @@
         
         <li>
             <h2>Assembly Radix Project</h2>
-        </li>
-
-        <li>
-            <h2>Connect Four</h2>
-        </li>
-
-        <li>
-            <h2>Shapes</h2>
         </li>
         
     </ul>
