@@ -123,19 +123,111 @@
         <li>
             <h2>Linear Data Structures Main Project</h2>
         </li>
-            <p> test </p>
+            <p> </p>
         <li>
             <h2>Card Stack and Flipping</h2>
         </li>
-        
+            <p> 
+                In this project, a console input was given that contained cards from a standard deck.  After the list of cards were given, a flipping order was then inputted. 
+                For example, the first part of the input would look similar to this:
+            
+                <div>
+                    <table class = "cardListMain" >
+                        <tr>
+                            <td>UHA </td>
+                            <td>US5 </td>
+                            <td>DHK </td>
+                            <td>UDA </td>
+                        </tr>
+                        <tr class="bottomRow">
+                            <td>DD10 </td>
+                            <td>DS6 </td>
+                            <td>UH3 </td>
+                            <td>DS4 </td>
+                        </tr>
+                    </table>
+                </div>
+
+                This input had to saved in a multidimensial array so that a sequence of flipping intructions could be performed. The cards that are inputted have a specific
+                code to them. The first letter was either 'U' or 'D' signifying face-up or face-down. The 2nd letter was the suit of the card; C for Clubs, D for Diamonds, 
+                H for Hearts, and S for Spades. Then the last portion signified the value. After the cards are inputed, a string of flipping intructions would follow such as "ULR".
+                For this string, D means flip (more like fold) the array downwards, L means flip towards the left, R means flip towards the right, and U means flip upwards.
+            </p>
+            <p>
+                These intructions had predefined rules:
+                
+                <ol class="ruleList" >
+                    <li>
+                        Each time a flip happened, the card had to switch from from face-up to face-down and vise verse.
+                    </li>
+                    <li>
+                        Each card that was flipped onto another card had to be placed into a stack with that other card.
+                    </li>
+                    <li>
+                        Each flip would halve the remaining number of rows or columns.
+                    </li>
+                    <li>
+                        When a row or column is flipped, the cards are taken off and placed in the new row / column starting with the top of the stack.
+                    </li>
+                </ol>
+                
+                In this instance, note that a card to the left of another in the table means on top of. So, executing the string "ULR" would yield the results of:
+
+                <div style="padding-top: 40px; ">
+                    <table class = "cardList" style="padding-bottom: 40px;">
+                        <tr>
+                            <td>UD10, UHA</td>
+                            <td>US5, US6</td>
+                            <td>DH3, DHK</td>
+                            <td>US4, UDA</td>
+                        </tr>
+                    </table>
+                    
+                    <span>--> </span>
+
+                    <table class = "cardList" style="padding-bottom: 40px;">
+                        <tr>
+                            <td>UDA, DS4, UD10, UHA</td>
+                            <td>UHK, UH3, US5, US6</td>
+                        </tr>
+                    </table>
+                    
+                    <span>--> </span>
+
+                    <table class = "cardList" style="padding-bottom: 40px;">
+                        <tr>
+                            <td>UHK, UH3, US5, US6, UDA, DS4, UD10, UHA</td>
+                        </tr>
+                    </table>
+
+                </div>
+              
+            </p>
+
+            <p>
+                With this result, the King of Hearts would be face-up on the top of the stack while the Ace of Hearts would be face-up on the bottom of the stack.
+            </p>
+
+            <p>
+                This project was completed using Java.
+            </p>
+
+
+
+
+
+
+
+
+
         <li>
             <h2>Assembly Strings Project</h2>
         </li>
-        
+            <p> </p>
         <li>
             <h2>Assembly Radix Project</h2>
         </li>
-        
+            <p> </p>
     </ul>
     
 </body>

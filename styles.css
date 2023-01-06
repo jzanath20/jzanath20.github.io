@@ -40,3 +40,20 @@ body {
   align-items: center;
 }
 
+.cardListMain td{
+  padding-right: 40px;
+}
+
+.bottomRow td{
+ padding-bottom: 40px;
+}
+
+.cardList td, table{
+  padding-right: 40px;
+  display: inline;
+}
+
+
+.ruleList li{
+  padding-bottom: 20px;
+}
